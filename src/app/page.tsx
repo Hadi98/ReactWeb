@@ -6,7 +6,7 @@ import Slidersection from "../app/slidersection";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-between h-screen">
+    <div className="flex flex-col items-center justify-between h-screen">
       {/* Next.js Logo */}
       {/* Your logo code here */}
       {/* ... */}

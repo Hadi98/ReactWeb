@@ -1,13 +1,14 @@
-import React from 'react';
-import Slidershow from "../../components/Slidershow";
+import React from "react";
+import Slideshow from "../../components/Slidershow";
 
-function slidersection(){
-    return (
-        <div>
-            <Slidershow/>
-        </div>
-    );
+export const useClient = true;
+
+function Slidersection() {
+  return (
+    <div>
+      <Slideshow />
+    </div>
+  );
 }
 
-export default slidersection;
-
+export default Slidersection;

@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
-import Footer from "../../components/Footer.js";
-import SliderSection from "../app/slidersection"; 
+import Footer from "../../components/Footer";
+import Slidersection from "../app/slidersection";
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
         </a>
       </div>
       <div>
-        <SliderSection />
+        <Slidersection />
         <Footer />
       </div>
     </div>

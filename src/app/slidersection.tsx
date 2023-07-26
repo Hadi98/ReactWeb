@@ -5,8 +5,10 @@ export const useClient = true;
 
 function Slidersection() {
   return (
-    <div>
-      <Slideshow />
+    <div className="container mx-auto p-4">
+      <div className="w-full h-80vh">
+        <Slideshow />
+      </div>
     </div>
   );
 }

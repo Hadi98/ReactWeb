@@ -3,6 +3,8 @@ import Image from "next/image";
 import Head from "next/head";
 
 import Slidersection from "../app/slidersection";
+import TwoDivsComponent from "../../components/TwoDivsComponent";
+import VerticalTabs from "../../components/Tabs";
 
 export default function Home() {
   // Original aspect ratio of the cross_top.png image
@@ -17,9 +19,9 @@ export default function Home() {
   const imageContainerWidth = imageContainerHeight * aspectRatio;
 
   return (
-    <div className="flex flex-col bg-blue-500 min-h-screen">
+    <div className="flex flex-col min-h-screen">
       {/* Container with logo and buttons */}
-      <div className="flex justify-between items-center p-4" style={{ height: imageContainerHeight }}>
+      <div className="flex justify-between bg-blue-500 items-center p-4" style={{ height: imageContainerHeight }}>
         {/* Image */}
         <div className="relative" style={{ width: imageContainerWidth, height: "100%" }}>
           {/* Replace background image with Image component */}
@@ -56,8 +58,41 @@ export default function Home() {
       </div>
 
       {/* Slider placed below the logo and buttons */}
-      <div className="flex justify-center flex-grow">
+      <div className="flex justify-center bg-blue-500 flex-grow">
         <Slidersection />
+      </div>
+
+      {/* Container for TwoDivsComponent */}
+      <div className="flex flex-col flex-grow h-90vh bg-white">
+        {/* TwoDivsComponent placed under the main div */}
+        <TwoDivsComponent
+          imageUrl="/image1.jpg"
+          imageAlt="Image 1"
+          text="This is some text on the right of Image 1"
+          imageOnLeft={true} // Image will be on the left
+        />
+      </div>
+
+      <div className="flex space-x-4">
+        {/* New Buttons */}
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+        <button>Button 4</button>
+      </div>
+
+      {/* Material-UI Tabs */}
+      <div className="flex justify-center bg-white">
+        <VerticalTabs />
+      </div>
+
+      <div className="flex flex-col flex-grow h-90vh bg-white">
+        <TwoDivsComponent
+          imageUrl="/image2.jpg"
+          imageAlt="Image 2"
+          text="This is some text on the left of Image 2"
+          imageOnLeft={false} // Image will be on the right
+        />
       </div>
     </div>
   );

@@ -72,16 +72,9 @@ export default function Home() {
         />
       </div>
 
-      <div className="flex space-x-4">
-        {/* New Buttons */}
-        <button>Button 1</button>
-        <button>Button 2</button>
-        <button>Button 3</button>
-        <button>Button 4</button>
-      </div>
 
       {/* Material-UI Tabs */}
-      <div className="flex justify-center bg-white">
+      <div className="flex flex-col flex-grow h-90vh">
         <VerticalTabs />
       </div>
 

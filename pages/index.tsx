@@ -26,10 +26,10 @@ export default function Home() {
         {/* Image */}
         <div className="relative" style={{ width: imageContainerWidth, height: "100%" }}>
           {/* Replace background image with Image component */}
-          <Image src="/cross_top.png" alt="background" width={originalWidth} height={originalHeight} />
+          <Image src="/images/cross_top.png" alt="background" width={originalWidth} height={originalHeight} />
           {/* Add your logo image here */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image src="/logo.png" alt="Logo" width={128} height={128} />
+            <Image src="/images/logo.png" alt="Logo" width={128} height={128} />
           </div>
         </div>
 
@@ -66,7 +66,7 @@ export default function Home() {
       <div className="flex flex-col flex-grow h-90vh bg-white">
         {/* TwoDivsComponent placed under the main div */}
         <TwoDivsComponent
-          imageUrl="/img2.png"
+          imageUrl="/images/img2.png"
           imageAlt="Image 1"
           text="This is some text on the right of Image 1"
           imageOnLeft={true} // Image will be on the left
@@ -88,7 +88,7 @@ export default function Home() {
 
       <div className="flex flex-col flex-grow h-90vh bg-white">
         <TwoDivsComponent
-          imageUrl="/img2.png"
+          imageUrl="/images/img2.png"
           imageAlt="Image 2"
           text="This is some text on the left of Image 2"
           imageOnLeft={false} // Image will be on the right

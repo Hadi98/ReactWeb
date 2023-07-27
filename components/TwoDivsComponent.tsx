@@ -20,7 +20,7 @@ const TwoDivsComponent: React.FC<TwoDivsComponentProps> = ({
         <>
           {/* Image on the left */}
           <div className="relative w-1/2 h-full flex items-center justify-center m-4">
-            <Image src="/about_img.jpg" alt="about" width={600} height={600} />
+            <Image src="/images/about_img.jpg" alt="about" width={600} height={600} />
           </div>
           {/* Text on the right */}
           <div className="w-1/2 flex flex-col justify-center m-4">
@@ -49,7 +49,7 @@ const TwoDivsComponent: React.FC<TwoDivsComponentProps> = ({
           </div>
           {/* Image on the right */}
           <div className="relative w-1/2 h-full flex items-center justify-center m-4">
-            <Image src="/work_img.jpg" alt="work" width={600} height={600} />
+            <Image src="/images/work_img.jpg" alt="work" width={600} height={600} />
           </div>
         </>
       )}

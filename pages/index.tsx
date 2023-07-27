@@ -6,7 +6,6 @@ import Slidersection from "../components/Slidersection";
 import TwoDivsComponent from "../components/TwoDivsComponent";
 import VerticalTabs from "../components/Tabs";
 
-
 export default function Home() {
   // Original aspect ratio of the cross_top.png image
   const originalWidth = 1024;

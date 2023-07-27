@@ -5,8 +5,8 @@ import 'react-slideshow-image/dist/styles.css'; // Import the required CSS for t
 
 const Slidershow: React.FC = () => {
   const images = [
-    "/img2.png",
-    "/img2.png",
+    "/images/img2.png",
+    "/images/img2.png",
   ];
 
   const zoomInProperties = {

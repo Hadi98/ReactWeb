@@ -5,6 +5,9 @@ import Head from "next/head";
 import Slidersection from "../components/Slidersection";
 import TwoDivsComponent from "../components/TwoDivsComponent";
 import VerticalTabs from "../components/Tabs";
+import FourInputComponent from "../components/InputComponents"
+import Footer from "../components/Footer";
+import Copyright from "../components/Copyright";
 
 export default function Home() {
   // Original aspect ratio of the cross_top.png image
@@ -86,6 +89,34 @@ export default function Home() {
           imageOnLeft={false} // Image will be on the right
         />
       </div>
+
+
+      <div className="bg-blue-500 h-90vh flex">
+  <div className="flex-1">
+    <div className="p-4 pl-40 pt-32">
+      <h1 className="text-4xl font-bold">
+        <span className="text-black">Request</span> <span className="text-white">A call Back</span>
+      </h1>
     </div>
+    <div className="p-4">
+      <FourInputComponent placeholderText="Full Name" inputWidth="500px" inputHeight="60px" borderRadius="35px" divMarginTop="60px" inputPaddingLeft="150px" />
+      <FourInputComponent placeholderText="Email" inputWidth="500px" inputHeight="60px" borderRadius="35px" divMarginTop="30px" inputPaddingLeft="150px" />
+      <FourInputComponent placeholderText="Phone Number" inputWidth="500px" inputHeight="60px" borderRadius="35px" divMarginTop="30px" inputPaddingLeft="150px" />
+      <FourInputComponent placeholderText="Message" inputWidth="500px" inputHeight="150px" borderRadius="35px" divMarginTop="30px" inputPaddingLeft="150px" />
+    </div>
+  </div>
+  <div className="flex-1 flex items-center justify-center mt-40">
+    <Image src="/images/map.jpg" alt="map" width={500} height={1200} />
+  </div>
+</div>
+
+<div>
+<Footer />
+</div>
+<div>
+<Copyright />
+</div>
+
+  </div>
   );
 }

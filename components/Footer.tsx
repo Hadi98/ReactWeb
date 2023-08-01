@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Address */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-2">Address</h3>
+            <h3 className="text-white font-bold text-4xl mb-2">Address</h3>
             <p className="text-gray-500">
               It is a long established fact that a 
               <br />
@@ -27,7 +27,7 @@ const Footer = () => {
 
           {/* Links */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-2">Links</h3>
+            <h3 className="text-white font-bold text-4xl mb-2">Links</h3>
             <ul className="list-disc text-white space-y-2">
               <li>
                 <a href="#" className="text-white hover:text-blue-500">Home</a>
@@ -47,7 +47,7 @@ const Footer = () => {
 
           {/* Follow Us */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-2">Follow Us</h3>
+            <h3 className="text-white font-bold text-4xl mb-2">Follow Us</h3>
             <ul className="list text-white space-y-2">
               <li>
                 <a href="#" className="text-white hover:text-blue-500 ">
@@ -80,10 +80,10 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-2">Newsletter</h3>
+            <h3 className="text-white font-bold text-4xl mb-2">Newsletter</h3>
             <form className="flex flex-col">
               <input type="email" placeholder="Enter Your Email" className="py-2 px-4 rounded-md mb-2 w-60 h-30" />
-              <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700 w-32 h-10">
+              <button type="submit" className="bg-blue-400 text-white py-2 px-4 rounded-md hover:bg-blue-700 w-32 h-10">
                 Subscribe
               </button>
             </form>

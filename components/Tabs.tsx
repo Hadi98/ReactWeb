@@ -23,12 +23,12 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3,backgroundColor: 'white', }}>
+        <Box sx={{ p: 3, backgroundColor: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center',height: '350px', width: '870px', }}>
           {imageSrc && (
             <img
               src={imageSrc}
               alt={`Image for Tab ${index}`}
-              style={{ marginBottom: 10 }}
+              style={{ marginBottom:'10' }}
             />
           )}
           <Typography>{children}</Typography>
@@ -58,16 +58,23 @@ const VerticalTabs = () => {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider','& .MuiTab-root': {
           '&.Mui-selected': {
-            backgroundColor: 'black', 
+            backgroundColor: 'black',
+            color: 'white', 
           },
-        }, }}
+          '&:hover': {   
+            backgroundColor: 'black',
+            color: 'white',
+          },
+          ml: 10,
+        }, 
+      }}
       >
-        <Tab label="Easy to cutomize" />
-        <Tab label="More flexible" />
-        <Tab label="Clean mode" />
-        <Tab label="Ratinaready" />
+        <Tab className="py-8" label="Easy to cutomize" />
+        <Tab className="py-8" label="More flexible" />
+        <Tab className="py-8" label="Clean mode" />
+        <Tab className="py-8" label="Ratinaready" />
       </Tabs>
-      <TabPanel value={value} index={0} imageSrc="/images/admin.png">
+      <TabPanel  value={value} index={0} imageSrc="/images/admin.png">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br />
         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br />
@@ -76,13 +83,28 @@ const VerticalTabs = () => {
         anim id est laborum."
       </TabPanel>
       <TabPanel value={value} index={1} imageSrc="/images/admin.png">
-        Content for Button 2
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br />
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br />
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br />
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit<br />
+        anim id est laborum."
       </TabPanel>
       <TabPanel value={value} index={2} imageSrc="/images/admin.png">
-        Content for Button 3
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br />
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br />
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br />
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit<br />
+        anim id est laborum."
       </TabPanel>
       <TabPanel value={value} index={3} imageSrc="/images/admin.png">
-        Content for Button 4
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br />
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br />
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br />
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit<br />
+        anim id est laborum."
       </TabPanel>
     </Box>
   );

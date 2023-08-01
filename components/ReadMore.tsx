@@ -5,20 +5,25 @@ interface ReadMoreProps {
 }
 
 const ReadMore: React.FC<ReadMoreProps> = ({ backgroundColor }) => {
-  const buttonStyle: React.CSSProperties = {
-    backgroundColor: backgroundColor === 'gray' ? 'bg-gray-100' : 'bg-blue-400',
-    color: backgroundColor === 'gray' ? 'black' : 'black', // Assuming text color is white for both cases
-    border: `6px solid ${backgroundColor === 'gray' ? 'blue' : 'white'}`,
-    padding: '16px 32px',
-    borderRadius: '40px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s, border-color 0.3s',
-    marginTop: '50px',
-    
-  };
-  
+  // Define a dynamic className based on the backgroundColor prop
+  const buttonClassName = `px-8 py-4 border-4 ${backgroundColor === 'gray' ? 'border-blue-500 bg-gray-100 text-black' : 'border-white bg-custom-blue text-white'} transition-colors`;
 
-  return <button style={buttonStyle}>Read More</button>;
+  // Define the hover effect styles based on the backgroundColor prop
+  const hoverStyle = backgroundColor === 'gray' ? 'hover:bg-blue-500 hover:text-white' : 'hover:bg-black hover:text-custom-blue';
+
+  // Define the border radius based on the backgroundColor prop
+  const borderRadius = backgroundColor === 'gray' ? '12px' : '24px';
+
+  // Define the button style with the border radius
+  const buttonStyle: React.CSSProperties = {
+    borderRadius: borderRadius,
+  };
+
+  return (
+    <button className={`${buttonClassName} ${hoverStyle}`} style={buttonStyle}>
+      Read More
+    </button>
+  );
 };
 
 export default ReadMore;

@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Container with logo and buttons */}
-      <div className="flex justify-between bg-blue-400 items-center" style={{ height: imageContainerHeight }}>
+      <div className="fixed top-0 left-0 right-0 z-50 flex justify-between bg-custom-blue items-center" style={{ height: imageContainerHeight }}>
         {/* Image */}
         <div className="relative " style={{ width: imageContainerWidth, height: "100%" }}>
           {/* Replace background image with Image component */}
@@ -38,29 +38,29 @@ export default function Home() {
         {/* Buttons set at the top right position */}
         <div className="flex space-x-4">
           {/* Home Button */}
-          <a href="#" className="p-6 rounded-md bg-blue-400 hover:bg-blue-500">
+          <a href="#" className="p-6 rounded-md text-white bg-custom-blue hover:bg-white hover:my-0 transform hover:scale-50 transition-transform">
             Home
           </a>
 
           {/* About Button */}
-          <a href="#" className="p-6 rounded-md bg-blue-400 hover:bg-white">
+          <a href="#" className="p-6 rounded-md text-white bg-custom-blue hover:bg-white hover:my-0 transform hover:scale-50 transition-transform">
             About
           </a>
 
           {/* Work Button */}
-          <a href="#" className="p-6 rounded-md bg-blue-400 hover:bg-white">
+          <a href="#" className="p-6 rounded-md text-white bg-custom-blue hover:bg-white hover:my-0 transform hover:scale-50 transition-transform">
             Work
           </a>
 
           {/* Contact Button */}
-          <a href="#" className="p-6 rounded-md bg-blue-400 hover:bg-white">
+          <a href="#" className="p-6 rounded-md text-white bg-custom-blue hover:bg-white hover:my-0 transform hover:scale-50 transition-transform">
             Contact
           </a>
         </div>
       </div>
-
+      <div className="h-16" />
       {/* Slider placed below the logo and buttons */}
-      <div className="flex justify-center bg-blue-400 flex-grow">
+      <div className="flex justify-center bg-custom-blue flex-grow">
         <Slidersection />
       </div>
 
@@ -79,11 +79,11 @@ export default function Home() {
 
       {/* Material-UI Tabs */}
       <div className="flex flex-col flex-grow h-90vh">
-      <div className="text-center py-16 bg-white h-30vh">
-            <h2 className="text-4xl poppins-extra-bold ">
-              <span>Why</span>  <span className="text-blue-500">Choose Us</span> 
-            </h2>
-          </div>
+        <div className="text-center py-16 bg-white h-30vh">
+          <h2 className="text-4xl font-Poppins-ExtraBold text-blue-500">
+            <span>Why</span>  <span>Choose Us</span> 
+          </h2>
+        </div>
         <VerticalTabs />
       </div>
 
@@ -97,18 +97,18 @@ export default function Home() {
       </div>
 
 
-      <div className="bg-blue-400 h-90vh flex">
+      <div className="bg-custom-blue h-90vh flex">
         <div className="flex-1">
           <div className="p-4 pl-40 pt-32">
-            <h1 className="text-4xl poppins-extra-bold">
-              <span className="text-black">Request</span> <span className="text-white">A call Back</span>
+            <h1 className="text-4xl font-Poppins-ExtraBold text-black">
+              <span>Request</span> <span className="text-white">A call Back</span>
             </h1>
           </div>
           <div className="p-4">
-            <FourInputComponent placeholderText="Full Name" inputWidth="500px" inputHeight="60px" borderRadius="35px" divMarginTop="60px" inputPaddingLeft="140px" placeholderPaddingLeft="30px"/>
-            <FourInputComponent placeholderText="Email" inputWidth="500px" inputHeight="60px" borderRadius="35px" divMarginTop="30px" inputPaddingLeft="140px" placeholderPaddingLeft="30px"/>
-            <FourInputComponent placeholderText="Phone Number" inputWidth="500px" inputHeight="60px" borderRadius="35px" divMarginTop="30px" inputPaddingLeft="140px" placeholderPaddingLeft="30px"/>
-            <FourInputComponent placeholderText="Message" inputWidth="500px" inputHeight="150px" borderRadius="35px" divMarginTop="30px" inputPaddingLeft="140px" placeholderPaddingLeft="30px"/>
+            <FourInputComponent placeholderText="Full Name" inputWidth="500px" inputHeight="60px" borderRadius="35px" divMarginTop="60px" inputPaddingLeft="30px" placeholderPaddingLeft="30px" />
+            <FourInputComponent placeholderText="Email" inputWidth="500px" inputHeight="60px" borderRadius="35px" divMarginTop="30px" inputPaddingLeft="30px" placeholderPaddingLeft="30px"/>
+            <FourInputComponent placeholderText="Phone Number" inputWidth="500px" inputHeight="60px" borderRadius="35px" divMarginTop="30px" inputPaddingLeft="30px" placeholderPaddingLeft="30px"/>
+            <FourInputComponent placeholderText="Message" inputWidth="500px" inputHeight="150px" borderRadius="35px" divMarginTop="30px" inputPaddingLeft="30px" placeholderPaddingLeft="30px"/>
           </div>
         </div>
         <div className="flex-1 flex items-center justify-center mt-40">
@@ -122,7 +122,6 @@ export default function Home() {
       <div>
         <Copyright />
       </div>
-
     </div>
   );
 }

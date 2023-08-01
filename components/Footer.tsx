@@ -83,7 +83,7 @@ const Footer = () => {
             <h3 className="text-white font-bold text-4xl mb-2">Newsletter</h3>
             <form className="flex flex-col">
               <input type="email" placeholder="Enter Your Email" className="py-2 px-4 rounded-md mb-2 w-60 h-30" />
-              <button type="submit" className="bg-blue-400 text-white py-2 px-4 rounded-md hover:bg-blue-700 w-32 h-10">
+              <button type="submit" className="bg-custom-blue text-white py-2 px-4 rounded-md hover:bg-blue-700 w-32 h-10">
                 Subscribe
               </button>
             </form>

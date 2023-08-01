@@ -1,6 +1,4 @@
-
-
-import React from 'react';
+import React, { useState } from 'react';
 
 interface FourInputComponentProps {
   placeholderText: string;
@@ -13,30 +11,34 @@ interface FourInputComponentProps {
 }
 
 const FourInputComponent: React.FC<FourInputComponentProps> = ({ placeholderText, inputWidth, inputHeight, borderRadius, divMarginTop, inputPaddingLeft, placeholderPaddingLeft,}) => {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
+  };
+
   const inputStyle: React.CSSProperties = {
     width: inputWidth,
     height: inputHeight,
     borderRadius: borderRadius,
+    paddingLeft: inputValue ? placeholderPaddingLeft : inputPaddingLeft, // Apply padding-left when there is text in the input field
   };
-  const placeholderStyle: React.CSSProperties = {
-    paddingLeft: placeholderPaddingLeft, 
+
+  const containerStyle: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'flex-end', // Push the input field to the right
+    marginTop: divMarginTop,
   };
 
   return (
-    <div className="mb-4" style={{ marginTop: divMarginTop,paddingLeft: inputPaddingLeft}}> {/* Added style with marginTop */}
+    <div className="mb-4" style={containerStyle}>
       <input
         type="text"
         placeholder={placeholderText}
         style={inputStyle}
+        value={inputValue}
+        onChange={handleInputChange} // Call the handleInputChange function on input change
       />
-      <style jsx>
-        {`
-          ::placeholder {
-            /* Apply the placeholder left padding */
-            ${placeholderStyle.paddingLeft && `padding-left: ${placeholderStyle.paddingLeft};`}
-          }
-        `}
-      </style>
     </div>
   );
 };

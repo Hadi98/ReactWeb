@@ -12,7 +12,7 @@ const Slidershow: React.FC = () => {
 
   const zoomInProperties = {
     indicators: true,
-    scale: 1,
+    scale: 0.8, // Reduce the image size by changing the scale
     duration: 5000,
     transitionDuration: 500,
     infinite: true,
@@ -30,22 +30,25 @@ const Slidershow: React.FC = () => {
   };
 
   return (
-    <div className="m-auto w-full h-full">
+    <div className="m-auto w-full h-full pt-20">
       <Slide {...zoomInProperties}>
         {images.map((each, index) => (
           <div key={index} className="each-slide">
-            <div className="flex w-full h-full">
+            <div className="flex w-full h-full justify-end"> {/* Add justify-end to push the elements to the right */}
               {/* Text container */}
-              <div className="flex flex-col justify-center items-start w-1/4 px-4">
+              <div className="w-1/4 px-4 justify-end"> {/* Add justify-end to push the text to the right */}
                 <p className="poppins-extra-bold" style={textStyle}>Get<br/>Thinking A<br/>long time</p>
-                <p className="font-bold" style={{ ...textStyle, fontSize: '16px' }}>
+                <p className="text-white" style={{ fontSize: '16px', textAlign: 'left',marginTop:'30px' }}>{/* Add textAlign: 'right' to align text to the right */}
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 </p>
-                <ReadMore backgroundColor="blue" />
+                <div className="flex justify-start" style={{marginTop:'30px'}}>
+              <ReadMore backgroundColor="bg-custom-blue"/>
+            </div>
+               
               </div>
 
               {/* Image container */}
-              <div className="w-3/4 h-full">
+              <div className="w-3/5 h-3/5 flex justify-end"> {/* Add justify-end to push the image to the right */}
                 <img className="w-full h-full object-cover rounded-lg" src={each} alt={`Slide ${index + 1}`} />
               </div>
             </div>

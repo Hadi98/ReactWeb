@@ -9,3 +9,13 @@
 h1, h2 {
   font-family: 'Poppins-ExtraBold', sans-serif;
 }
+
+.bg-custom-blue {
+  background-color: rgb(0, 174, 236);
+}
+
+.bg-custom-blue a:hover {
+  background-color: white;
+  color: rgb(0, 174, 236);
+  
+}

@@ -27,7 +27,7 @@ const TwoDivsComponent: React.FC<TwoDivsComponentProps> = ({
           <div className="w-1/2 flex flex-col justify-center m-4">
             <div className="flex flex-col justify-center h-full">
               <h1 className="text-5xl font-bold" style={{ textAlign: 'left' }}>
-                <span>About</span> <span className="text-blue-500">Software</span>
+                <span>About</span> <span className="text-custom-blue">Software</span>
               </h1>
             </div>
             <p style={{marginTop:'30px'}}>
@@ -47,7 +47,7 @@ const TwoDivsComponent: React.FC<TwoDivsComponentProps> = ({
           <div className="w-1/2 flex flex-col justify-center m-4">
             <div className="flex flex-col justify-center h-full">
               <h1 className="text-5xl font-bold" style={{ textAlign: 'left' }}>
-              <span>How It</span> <span className="text-blue-500">Works</span>
+              <span>How It</span> <span className="text-custom-blue">Works</span>
               </h1>
             </div>
             <p style={{marginTop:'30px'}}>

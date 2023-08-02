@@ -1,3 +1,4 @@
+/* global.css */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -10,12 +11,17 @@ h1, h2 {
   font-family: 'Poppins-ExtraBold', sans-serif;
 }
 
+/* Define the custom blue background color */
 .bg-custom-blue {
   background-color: rgb(0, 174, 236);
 }
 
-.bg-custom-blue a:hover {
-  background-color: white;
+/* Define the custom blue text color */
+.text-custom-blue {
   color: rgb(0, 174, 236);
-  
+}
+
+/* Define the custom blue border color */
+.border-custom-blue {
+  border-color: rgb(0, 174, 236);
 }

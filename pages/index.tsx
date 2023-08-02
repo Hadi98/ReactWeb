@@ -8,6 +8,7 @@ import VerticalTabs from "../components/Tabs";
 import FourInputComponent from "../components/InputComponents"
 import Footer from "../components/Footer";
 import Copyright from "../components/Copyright";
+import MyComponent from "../components/NavButtonComponents";
 
 export default function Home() {
   // Original aspect ratio of the cross_top.png image
@@ -37,25 +38,7 @@ export default function Home() {
 
         {/* Buttons set at the top right position */}
         <div className="flex space-x-4">
-          {/* Home Button */}
-          <a href="#" className="p-6 rounded-md text-white bg-custom-blue hover:bg-white hover:my-0 transform hover:scale-50 transition-transform">
-            Home
-          </a>
-
-          {/* About Button */}
-          <a href="#" className="p-6 rounded-md text-white bg-custom-blue hover:bg-white hover:my-0 transform hover:scale-50 transition-transform">
-            About
-          </a>
-
-          {/* Work Button */}
-          <a href="#" className="p-6 rounded-md text-white bg-custom-blue hover:bg-white hover:my-0 transform hover:scale-50 transition-transform">
-            Work
-          </a>
-
-          {/* Contact Button */}
-          <a href="#" className="p-6 rounded-md text-white bg-custom-blue hover:bg-white hover:my-0 transform hover:scale-50 transition-transform">
-            Contact
-          </a>
+          <MyComponent/>
         </div>
       </div>
       <div className="h-16" />
@@ -80,8 +63,8 @@ export default function Home() {
       {/* Material-UI Tabs */}
       <div className="flex flex-col flex-grow h-90vh">
         <div className="text-center py-16 bg-white h-30vh">
-          <h2 className="text-4xl font-Poppins-ExtraBold text-blue-500">
-            <span>Why</span>  <span>Choose Us</span> 
+          <h2 className="text-4xl font-Poppins-ExtraBold">
+            <span>Why</span>  <span className="text-custom-blue">Choose Us</span> 
           </h2>
         </div>
         <VerticalTabs />

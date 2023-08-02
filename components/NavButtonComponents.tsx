@@ -12,7 +12,7 @@ const NavButton: React.FC<NavButtonProps> = ({ href, children }) => {
     padding: '6px 12px',
     borderRadius: '8px',
     cursor: 'pointer',
-    backgroundColor: isHovered ? 'white' : 'rgb(0, 174, 236)',
+    backgroundColor: isHovered ? 'white' : '',
     color: isHovered ? 'rgb(0, 174, 236)' : 'white',
     transition: 'height 0.3s, background-color 0.3s, color 0.3s',
     height: isHovered ? '30px' : '40px',
